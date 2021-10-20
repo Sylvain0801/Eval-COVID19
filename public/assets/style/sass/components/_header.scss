@@ -1,0 +1,190 @@
+header {
+  box-shadow: 0 3px 6px rgba(black, .35);
+  font-size: 1rem;
+  position: relative;
+  background-color: white;
+  @media screen and (max-width: 1200px){
+    font-size: .8rem
+  }
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    @media screen and (max-width: 768px) {
+      height: 90px;
+    }
+    img {
+      height: 80px;
+      margin: 15px 0;
+      @media screen and (max-width: 768px) {
+        height: 60px;
+      }
+    }
+    .navigation-title-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .title-search-connect-group {
+        display: flex;
+        justify-content: flex-end;
+        .active-title-group {
+          flex: 1;
+          h1 {
+            margin: 10px 0 35px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $blue;
+            @media screen and (max-width: 1400px){
+              font-size: 1rem;
+              margin: 10px 0 45px;
+            }
+            @media screen and (max-width: 1200px){
+              margin: 15px 0 45px;
+            }
+            @media screen and (max-width: 768px) {
+              font-size: .9rem;
+              margin: 15px 15px 10px;
+            }
+          }
+          h2 {
+            text-align: center;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: $blue;
+            text-transform: uppercase;
+            display: none;
+            @media screen and (max-width: 768px) {
+              display: block;
+            }
+          }
+        }
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5%;
+        li {
+          background-color: white;
+        }
+        @media screen and (max-width: 768px){
+          flex-direction: column;
+          position: absolute;
+          margin: 0;
+          left: 0;
+          top: 90px;
+          width: 100%;
+          z-index: -2;
+          transform: translateY(-280px);
+          transition: all .4s ease-in-out;
+          &.show {
+            transform: translateY(0);
+            transition: all .4s ease-in-out;
+          }
+        }
+        li:nth-child(3) a {
+          border-bottom: 1px solid white;
+          &:hover, &.active {
+            border-bottom: 3px solid $blue;
+          }
+        }
+        li:nth-child(4) {
+          display: none;
+          @media screen and (max-width: 768px) {
+            background-color: $blue;
+            color: white;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid white;
+            a {
+              color: white;
+            }
+            i {
+              padding: 15px 0;
+            }
+          }
+        }
+        a {
+          font-family: $roboto;
+          font-size: .9em;
+          padding: 20px .625em 15px;
+          color: $grey-5;
+          &:hover, &.active {
+            border-bottom: 3px solid $blue;
+          }
+          @media screen and (max-width: 768px){
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            border-bottom: 1px solid $blue;
+            &:hover {
+              border-bottom: 1px solid $blue;
+              background-color: $blue;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .search-connect-group {
+      top: 0;
+      right: 0;
+      margin-top: 10px;
+      display: flex;
+      .search-group {
+        display: flex;
+        input {
+          height: 30px;
+          width: 100px;
+          outline: none;
+          border: none;
+          font-size: .9rem;
+          padding: 0;
+          padding-left: 10px;
+          background-color: #ccc;
+          border-top-left-radius: 5px;
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+        }
+        span {
+          display: block;
+          height: 30px;
+          width: 30px;
+          background-color: $blue;
+          border-top-right-radius: 5px;
+          color: white;
+          @media screen and (max-width: 768px) {
+            background-color: white;
+            color: $blue;
+          }
+          i {
+            padding: 4px;
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .connect-burger-group {
+        display: flex;
+        flex-direction: column;
+        i.fa.fa-user {
+          height: 30px;
+          padding: 0 10px;
+          color: $blue;
+          font-size: 1.9rem;
+        }
+        i.fa.fa-bars {
+          color: $grey-5;
+          display: none;
+          margin-top: 25px;
+          cursor: pointer;
+          @media screen and (max-width: 768px){
+            display: block;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
