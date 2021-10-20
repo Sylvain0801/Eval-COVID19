@@ -1,0 +1,29 @@
+.strategy-container {
+  .widget-1 {
+    height: 80px;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  h3 {
+    color: $grey-5;
+    margin: 20px 0;
+  }
+  p {
+    font-size: .9rem;
+    &.text-bg-grey {
+      margin: 0 -2%;
+      padding: 20px;
+      background-color: $grey-5;
+      color: white;
+    }
+  }
+  h4 {
+    color: $grey-5;
+    margin: 20px 0 10px;
+  }
+  img.info-vaccin {
+    margin: 20px 2%;
+    display: block;
+    width: 96%;
+  }
+}

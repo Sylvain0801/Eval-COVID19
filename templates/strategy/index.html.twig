@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="main-container">
+  <div class="bg-container strategy-container">
+    <div class="widget-1 mobile-screen">
+        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+        <h2>Je suis solidaire contre la COVID</h2>
+        <i class="fa fa-arrow-right"></i>
+    </div>
+    <h3>La stratégie vaccinale et la liste des publics prioritaires</h3>
+    <p class="text-bg-grey">La stratégie vaccinale, arrêtée par le ministre des Solidarités et de la Santé, vise à déterminer les 
+        personnes prioritaires à la vaccination, en fonction des enjeux de santé publique et de l’arrivée 
+        progressive des doses de vaccins.</p>
+    <h4>La vaccination accessible à toutes les personnes de 12 ans et plus</h4>
+    <p>Suivant les recommandations vaccinales émises par la Haute autorité de santé dans ses avis du 27 novembre 2020 
+        et du 2 février 2021, une priorisation des publics éligibles avait été mise en place au début de la campagne de 
+        vaccination.<br>
+        L’âge de la personne est le facteur de risque de développer une forme grave de Covid-19 le plus important, la 
+        Haute autorité de santé recommandait donc de prioriser les populations cibles vaccinales en fonction de différentes 
+        classes d’âge et selon les facteurs d’exposition au virus (ex : vie en collectivité, professionnels du secteur de la 
+        santé…).<br>
+        Par ailleurs, à tranche d’âge égale, les personnes souffrant de comorbidités associées à un risque de développer 
+        une forme grave de Covid-19 devaient être vaccinées en premier.</p>
+    <h4>Les particuliers concernés</h4>
+    <img class="info-vaccin" src="{{ asset('assets/images/info_vaccins.png') }}" alt="info vaccin">
+    <img class="info-vaccin" src="{{ asset('assets/images/info_rappel.png') }}" alt="info rappel">
+  </div>
+</div>
+{% endblock %}

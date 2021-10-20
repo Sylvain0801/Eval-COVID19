@@ -6,6 +6,39 @@
   @media screen and (max-width: 768px) {
     width: 100%;
   }
+  .widget-1 {
+    height: 80px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: $blue;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(black, .35);
+    position: relative;
+    &.mobile-screen {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    img {
+      height: 75%;
+      margin: auto 0;
+    }
+    h2 {
+      color: white;
+      text-align: center;
+      margin: auto 15px;
+      font-size: 1.5em;
+    }
+    i.fa.fa-arrow-right {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      color: white;
+      font-size: 1rem;
+    }
+  }
   .card-actu {
     height: 200px;
     border-radius: 10px;

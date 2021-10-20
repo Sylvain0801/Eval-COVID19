@@ -22,9 +22,9 @@
       </div>
       <nav>
         <ul class="navigation-menu">
-          <li class="navigation-link-item"><a class="{{ active == 'l\' actualité' ? 'active' : '' }}" href="">L'actualité</a></li>
-          <li class="navigation-link-item"><a href="">La campagne de vaccination</a></li>
-          <li class="navigation-link-item"><a href="">La stratégie vaccinale</a></li>
+          <li class="navigation-link-item"><a class="{{ active == 'l\' actualité' ? 'active' : '' }}" href="{{ path('home') }}">L'actualité</a></li>
+          <li class="navigation-link-item"><a class="{{ active == 'la campagne de vaccination' ? 'active' : '' }}" href="{{ path('campagne') }}">La campagne de vaccination</a></li>
+          <li class="navigation-link-item"><a class="{{ active == 'la stratégie vaccinale' ? 'active' : '' }}" href="{{ path('strategy') }}">La stratégie vaccinale</a></li>
           <li class="navigation-link-item"><i class="fa fa-map-marker"></i><a href="">&nbsp;Trouver un centre de vaccination</a></li>
           <li class="navigation-link-item"><a href="">Je suis solidaire contre la COVID</a></li>
         </ul>

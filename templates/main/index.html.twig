@@ -4,13 +4,18 @@
 {% block body %}
   <div class="main-container d-flex">
     <div class="actu-container">
+      <div class="widget-1 mobile-screen">
+        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+        <h2>Je suis solidaire contre la COVID</h2>
+        <i class="fa fa-arrow-right"></i>
+      </div>
       {% for post in posts %}
         <div class="card-actu">
           <div class="card-actu-img" style="background-image: url({{ asset(post.imgPath) }});"></div>
           <div class="card-actu-body">
             <h4 class="card-actu-category">{{ post.category }}</h4>
             <h3 class="card-actu-title">{{ post.title }}</h3>
-            <p class="card-actu-content">{{ post.content|u.truncate(300, '...', false) }}</p>
+            <p class="card-actu-content">{{ post.content|u.truncate(250, '...', false) }}</p>
             <p class="card-actu-time"><i class="fa fa-clock-o"></i>le {{ post.createdAt|date('d/m/Y') }} à {{ post.createdAt|date('h:i') }}</p>
             <div class="card-actu-footer">
               <span>
@@ -31,21 +36,25 @@
         <h2>Je suis solidaire contre la COVID</h2>
         <i class="fa fa-arrow-right"></i>
       </div>
-      <div class="widget-2">
-        <i class="fa fa-medkit"></i>
-        <h2>La campagne de vaccination</h2>
-        <p>Eaque laboriosam quibusdam soluta deserunt necessitatibus, hic aperiam aspernatur aliquam officia exercitationem excepturi consequuntur. Veritatis tenetur totam ducimus, id ea voluptatem quas.</p>
-        <i class="fa fa-arrow-right"></i>
-      </div>
-      <div class="widget-2">
-        <i class="fa fa-medkit"></i>
-        <h2>La stratégie vaccinale</h2>
-        <p>Eaque laboriosam quibusdam soluta deserunt necessitatibus, hic aperiam aspernatur aliquam officia exercitationem excepturi consequuntur. Veritatis tenetur totam ducimus, id ea voluptatem quas.</p>
-        <i class="fa fa-arrow-right"></i>
-      </div>
+      <a href="{{ path('campagne') }}">
+        <div class="widget-2">
+          <i class="fa fa-medkit"></i>
+          <h2>La campagne de vaccination</h2>
+          <p>Eaque laboriosam quibusdam soluta deserunt necessitatibus, hic aperiam aspernatur aliquam officia exercitationem excepturi consequuntur. Veritatis tenetur totam ducimus, id ea voluptatem quas.</p>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
+      <a href="{{ path('strategy') }}">
+        <div class="widget-2">
+          <img src="{{ asset('assets/images/gear.png') }}" alt="engrenage">
+          <h2>La stratégie vaccinale</h2>
+          <p>Eaque laboriosam quibusdam soluta deserunt necessitatibus, hic aperiam aspernatur aliquam officia exercitationem excepturi consequuntur. Veritatis tenetur totam ducimus, id ea voluptatem quas.</p>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
       <div class="widget-1">
-        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
-        <h2>Je suis solidaire contre la COVID</h2>
+        <i class="fa fa-map-marker"></i>
+        <h2>Je trouve un centre de vaccination</h2>
         <i class="fa fa-arrow-right"></i>
       </div>
     </div>

@@ -114,7 +114,7 @@ header .main-container .navigation-title-group .title-search-connect-group .acti
 header .main-container .navigation-title-group .title-search-connect-group .active-title-group h2 {
   text-align: center;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   color: #0040AD;
   text-transform: uppercase;
   display: none;
@@ -272,6 +272,41 @@ header .main-container .search-connect-group .connect-burger-group i.fa.fa-bars 
     width: 100%;
   }
 }
+.actu-container .widget-1 {
+  height: 80px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #0040AD;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+.actu-container .widget-1.mobile-screen {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .actu-container .widget-1.mobile-screen {
+    display: flex;
+    justify-content: center;
+  }
+}
+.actu-container .widget-1 img {
+  height: 75%;
+  margin: auto 0;
+}
+.actu-container .widget-1 h2 {
+  color: white;
+  text-align: center;
+  margin: auto 15px;
+  font-size: 1.5em;
+}
+.actu-container .widget-1 i.fa.fa-arrow-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 1rem;
+}
 .actu-container .card-actu {
   height: 200px;
   border-radius: 10px;
@@ -350,6 +385,44 @@ header .main-container .search-connect-group .connect-burger-group i.fa.fa-bars 
   font-size: 1rem;
 }
 
+.widget-1 {
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  background-color: #0040AD;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+.widget-1 img {
+  height: 75%;
+  margin: auto 0;
+}
+.widget-1 h2 {
+  color: white;
+  text-align: center;
+  margin: auto 15px;
+  font-size: 1.4em;
+}
+@media screen and (max-width: 992px) {
+  .widget-1 h2 {
+    font-size: 1.2em;
+  }
+}
+.widget-1 i.fa.fa-map-marker {
+  color: white;
+  font-size: 4rem;
+  align-self: center;
+}
+.widget-1 i.fa.fa-arrow-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 1rem;
+}
+
 .widget-container {
   width: 30%;
   margin-top: 20px;
@@ -387,6 +460,11 @@ header .main-container .search-connect-group .connect-burger-group i.fa.fa-bars 
     font-size: 1.2em;
   }
 }
+.widget-container .widget-1 i.fa.fa-map-marker {
+  color: white;
+  font-size: 4rem;
+  align-self: center;
+}
 .widget-container .widget-1 i.fa.fa-arrow-right {
   position: absolute;
   bottom: 10px;
@@ -422,4 +500,125 @@ header .main-container .search-connect-group .connect-burger-group i.fa.fa-bars 
   bottom: 10px;
   right: 10px;
   font-size: 1rem;
+}
+
+.bg-container {
+  background-color: white;
+  padding: 20px 2%;
+}
+.bg-container .logo-widget-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 576px) {
+  .bg-container .logo-widget-group {
+    flex-direction: column-reverse;
+  }
+}
+.bg-container .logo-widget-group > img {
+  width: 280px;
+  height: 70px;
+  margin-right: 20px;
+}
+.bg-container .logo-widget-group .widget-1 {
+  height: 80px;
+  max-width: 300px;
+  margin: 0 0 20px;
+}
+.bg-container h3 {
+  margin-bottom: 20px;
+}
+.bg-container :first-child h4 {
+  border-top: 1px solid #555555;
+}
+.bg-container .question-group {
+  cursor: pointer;
+}
+.bg-container .question-group h3, .bg-container .question-group h4 {
+  color: #555555;
+}
+.bg-container .question-group h4 {
+  position: relative;
+  padding: 20px 2%;
+  border-bottom: 1px solid #555555;
+  transition: 0.2s;
+}
+.bg-container .question-group h4::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 0%;
+  width: 4px;
+  background-color: #1FA3DF;
+  position: absolute;
+  transition: 0.1s;
+}
+.bg-container .question-group p {
+  color: #777777;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.bg-container .question-group i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2%;
+  color: #555555;
+  font-size: 2rem;
+}
+.bg-container .question-group i.fa-plus-square-o {
+  display: block;
+}
+.bg-container .question-group i.fa-minus-square {
+  display: none;
+}
+.bg-container .question-group:hover h4::before {
+  height: 100%;
+}
+.bg-container .question-group:hover h4 i {
+  color: #1FA3DF;
+}
+.bg-container .question-group.show p {
+  opacity: 1;
+  padding: 20px 2%;
+  height: initial;
+  visibility: visible;
+}
+.bg-container .question-group.show i.fa-plus-square-o {
+  display: none;
+}
+.bg-container .question-group.show i.fa-minus-square {
+  display: block;
+  color: #1FA3DF;
+}
+
+.strategy-container .widget-1 {
+  height: 80px;
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+.strategy-container h3 {
+  color: #555555;
+  margin: 20px 0;
+}
+.strategy-container p {
+  font-size: 0.9rem;
+}
+.strategy-container p.text-bg-grey {
+  margin: 0 -2%;
+  padding: 20px;
+  background-color: #555555;
+  color: white;
+}
+.strategy-container h4 {
+  color: #555555;
+  margin: 20px 0 10px;
+}
+.strategy-container img.info-vaccin {
+  margin: 20px 2%;
+  display: block;
+  width: 96%;
 }/*# sourceMappingURL=index.css.map */
