@@ -1,0 +1,43 @@
+.large-input-default {
+  display: flex;
+}
+.input-text-group {
+  position: relative;
+  .input-control {
+    width: 500px;
+    height: 50px;
+    border: 1px solid rgba(#7a7a7a, .5);
+    border-radius: 5px;
+    outline: none;
+    margin: 5px;
+    font-size: 1em;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  label {
+    position: absolute;
+    left: 20px;
+    top: -7px;
+    background-color: white;
+    color: $primary;
+    padding: 0 5px; 
+    opacity: 0;
+    transition: all .2s;
+  }
+  i.fa.fa-eye {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    color: rgba(#7a7a7a, .5);
+  }
+  .input-control:focus {
+    border: 2px solid $primary;
+    + label {
+      opacity: 1;
+      + i.fa.fa-eye {
+        color: $primary;
+      }
+    }
+  }
+}

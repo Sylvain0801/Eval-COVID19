@@ -3,6 +3,12 @@
   width: 65%;
   position: relative;
   // z-index: -3;
+  &.large {
+    width: initial;
+    .card-actu {
+      margin-right: 0;
+    }
+  }
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -64,11 +70,28 @@
       }
     }
     .card-actu-body {
+      position: relative;
       width: 65%;
       padding: 20px;
       @media screen and (max-width: 768px) {
         width: calc(100% - 40px);
         height: 200px;
+      }
+      .card-actu-action-buttons {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        i {
+          font-size: 1.5rem;
+          padding: 0;
+          padding-left: 5px;
+          &:nth-child(1) {
+            color: $blue;
+          }
+          &:nth-child(2) {
+            color: $red;
+          }
+        }
       }
       .card-actu-category {
         font-size: .8em;

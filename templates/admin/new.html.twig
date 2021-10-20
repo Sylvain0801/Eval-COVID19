@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<div class="main-container add-new-actu">
+    <div class="bg-container">
+        <h2>Ajouter une actualité</h2>
+        <div class="input-text-group">
+          <input type="text" name="input_login" id="input_login" class="input-control" placeholder="Catégorie de l'actualité">
+          <label for="input_login">Catégorie</label>
+        </div>
+        <div class="input-text-group">
+          <input type="text" name="input_login" id="input_login" class="input-control" placeholder="Titre de l'actualité">
+          <label for="input_login">Titre</label>
+        </div>
+        <div class="input-text-group">
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <label for="input_login">Contenu</label>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
