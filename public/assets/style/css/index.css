@@ -4,10 +4,16 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 110px;
   box-sizing: border-box;
   font-size: 16px;
   background-color: #efefef;
   min-height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, p, label {
@@ -50,7 +56,11 @@ a {
 header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
   font-size: 1rem;
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
   background-color: white;
 }
 @media screen and (max-width: 1200px) {
@@ -132,81 +142,6 @@ header .main-container-header .navigation-title-group .title-search-connect-grou
     display: block;
   }
 }
-header .main-container-header ul {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 5%;
-}
-header .main-container-header ul li {
-  background-color: white;
-}
-@media screen and (max-width: 768px) {
-  header .main-container-header ul {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    margin: 0;
-    left: 0;
-    top: 90px;
-    width: 100%;
-    transform: translateX(-100%);
-    transition: all 0.4s ease-in-out;
-  }
-  header .main-container-header ul.show {
-    transform: translateX(0);
-    transition: all 0.4s ease-in-out;
-  }
-}
-header .main-container-header ul li:nth-child(3) a {
-  border-bottom: 1px solid white;
-}
-header .main-container-header ul li:nth-child(3) a:hover, header .main-container-header ul li:nth-child(3) a.active {
-  border-bottom: 3px solid #0040AD;
-}
-header .main-container-header ul li:nth-child(4) {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  header .main-container-header ul li:nth-child(4) {
-    background-color: #0040AD;
-    color: white;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid white;
-  }
-  header .main-container-header ul li:nth-child(4) a {
-    color: white;
-  }
-  header .main-container-header ul li:nth-child(4) i {
-    padding: 15px 0;
-  }
-}
-header .main-container-header ul a {
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9em;
-  padding: 20px 0.625em 15px;
-  color: #555555;
-}
-header .main-container-header ul a:hover, header .main-container-header ul a.active {
-  border-bottom: 3px solid #0040AD;
-}
-@media screen and (max-width: 768px) {
-  header .main-container-header ul a {
-    display: block;
-    text-align: center;
-    font-size: 1.2em;
-    border-bottom: 1px solid #0040AD;
-  }
-  header .main-container-header ul a:hover {
-    border-bottom: 1px solid #0040AD;
-    background-color: #0040AD;
-    color: white;
-  }
-  header .main-container-header ul a.active {
-    border-bottom: 1px solid #0040AD;
-  }
-}
 header .main-container-header .search-connect-group {
   margin-top: 10px;
   display: flex;
@@ -271,11 +206,120 @@ header .main-container-header .search-connect-group .connect-burger-group i.fa.f
   }
 }
 
+nav {
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  top: 75px;
+  left: 0;
+  z-index: 20;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    z-index: 5;
+    top: -275px;
+    transition: all 0.4s ease-in-out;
+  }
+  nav.show {
+    top: 90px;
+    transition: all 0.4s ease-in-out;
+  }
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  height: 35px;
+  margin: 0 calc(15% + 100px);
+}
+@media screen and (max-width: 1400px) {
+  nav ul {
+    margin: 0 15% 0 calc(15% + 80px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav ul {
+    margin: 0 2% 0 calc(2% + 80px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav ul {
+    margin: 0 2% 0 calc(2% + 80px);
+  }
+}
+nav ul li {
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+}
+nav ul li:nth-child(3) a {
+  border-bottom: 1px solid white;
+}
+nav ul li:nth-child(3) a:hover, nav ul li:nth-child(3) a.active {
+  border-bottom: 3px solid #0040AD;
+}
+nav ul li:nth-child(4) {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  nav ul li:nth-child(4) {
+    background-color: #0040AD;
+    color: white;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid white;
+  }
+  nav ul li:nth-child(4) a {
+    color: white;
+    align-self: center;
+  }
+  nav ul li:nth-child(4) i {
+    padding: 15px 0;
+  }
+}
+nav ul a {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75em;
+  padding: 0 0.625em 15px;
+  color: #555555;
+  margin: 0 20px;
+}
+@media screen and (max-width: 992px) {
+  nav ul a {
+    margin: 0 10px;
+  }
+}
+nav ul a:hover, nav ul a.active {
+  border-bottom: 3px solid #0040AD;
+}
+@media screen and (max-width: 768px) {
+  nav ul a {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #0040AD;
+  }
+  nav ul a:hover {
+    border-bottom: 1px solid #0040AD;
+    background-color: #0040AD;
+    color: white;
+  }
+  nav ul a.active {
+    border-bottom: 1px solid #0040AD;
+  }
+}
+
 .actu-container {
   margin: 20px 0;
   width: 65%;
   position: relative;
-  z-index: -3;
 }
 .actu-container.large {
   width: initial;

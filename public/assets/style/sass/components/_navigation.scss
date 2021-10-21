@@ -1,0 +1,93 @@
+nav {
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  top: 75px;
+  left: 0;
+  z-index: 20;
+  @media screen and (max-width: 768px){
+    z-index: 5;
+    top: -275px;
+    transition: all .4s ease-in-out;
+    &.show {
+      top: 90px;
+      transition: all .4s ease-in-out;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    height: 35px;
+    margin: 0 calc(15% + 100px);
+    @media screen and (max-width: 1400px) {
+      margin: 0 15% 0 calc(15% + 80px);
+    }
+    @media screen and (max-width: 1200px) {
+      margin: 0 2% 0 calc(2% + 80px);
+    }
+    @media screen and (max-width: 1200px) {
+      margin: 0 2% 0 calc(2% + 80px);
+    }
+    li {
+      background-color: white;
+    }
+    @media screen and (max-width: 768px){
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+    li:nth-child(3) a {
+      border-bottom: 1px solid white;
+      &:hover, &.active {
+        border-bottom: 3px solid $blue;
+      }
+    }
+    li:nth-child(4) {
+      display: none;
+      @media screen and (max-width: 768px) {
+        background-color: $blue;
+        color: white;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid white;
+        a {
+          color: white;
+          align-self: center;
+        }
+        i {
+          padding: 15px 0;
+        }
+      }
+    }
+    a {
+      font-family: $roboto;
+      font-size: .75em;
+      padding: 0 .625em 15px;
+      color: $grey-5;
+      margin: 0 20px;
+      @media screen and (max-width: 992px) {
+        margin: 0 10px;
+      }
+      &:hover, &.active {
+        border-bottom: 3px solid $blue;
+      }
+      @media screen and (max-width: 768px){
+        display: block;
+        text-align: center;
+        font-size: .9em;
+        margin: 0;
+        padding: 15px 0;
+        border-bottom: 1px solid $blue;
+        &:hover {
+          border-bottom: 1px solid $blue;
+          background-color: $blue;
+          color: white;
+        }
+        &.active {
+          border-bottom: 1px solid $blue;
+        }
+      }
+    }
+  }
+}
