@@ -7,6 +7,9 @@
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(black, .35);
   position: relative;
+  &:hover {
+    background: linear-gradient(180deg, $blue 0%, rgba(0,32,87,1) 100%);
+  }
   &.button-add {
     color: white;
     height: 35px;

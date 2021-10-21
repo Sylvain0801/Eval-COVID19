@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<div class="main-container form-container">
+    <div class="bg-container">
+        <h2>Je suis solidaire contre la COVID</h2>
+        <form action="">
+          <div class="input-text-group">
+            <input type="text" name="input_lastname" id="input_lastname" class="input-control" placeholder="Mon nom">
+            <label for="input_lastname">Nom</label>
+          </div>
+          <div class="input-text-group">
+            <input type="text" name="input_firstname" id="input_firstname" class="input-control" placeholder="Mon prénom">
+            <label for="input_firstname">Prénom</label>
+          </div>
+          <div class="input-text-group">
+            <input type="text" name="input_email" id="input_email" class="input-control" placeholder="Mon email">
+            <label for="input_email">Email</label>
+          </div>
+          <div class="input-text-group">
+            <input type="text" name="input_secu" id="input_secu" class="input-control" placeholder="Mon n° de sécurité sociale">
+            <label for="input_secu">N° de sécurité sociale</label>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" name="vaccin_choice" id="vaccin_choice">
+            <label for="vaccin_choice"><i class="fa fa-check"></i>Je souhaite me faire vacciner</label>
+          </div>
+          <a href="{{ path('home') }}" class="button-primary"><i class="fa fa-check-circle"></i><span>Soumettre</span></a>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

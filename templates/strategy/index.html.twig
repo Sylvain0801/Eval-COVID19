@@ -3,11 +3,13 @@
 {% block body %}
 <div class="main-container">
   <div class="bg-container strategy-container">
-    <div class="widget-1 mobile-screen">
-        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
-        <h2>Je suis solidaire contre la COVID</h2>
-        <i class="fa fa-arrow-right"></i>
-    </div>
+    <a href="{{ path('solidaire') }}">
+      <div class="widget-1 mobile-screen">
+          <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+          <h2>Je suis solidaire contre la COVID</h2>
+          <i class="fa fa-arrow-right"></i>
+      </div>
+    </a>
     <h3>La stratégie vaccinale et la liste des publics prioritaires</h3>
     <p class="text-bg-grey">La stratégie vaccinale, arrêtée par le ministre des Solidarités et de la Santé, vise à déterminer les 
         personnes prioritaires à la vaccination, en fonction des enjeux de santé publique et de l’arrivée 

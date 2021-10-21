@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   background-color: #efefef;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, p, label {
@@ -23,6 +24,7 @@ ul {
 
 a {
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .main-container {

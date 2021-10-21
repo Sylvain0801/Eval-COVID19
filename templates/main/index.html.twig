@@ -4,11 +4,13 @@
 {% block body %}
   <div class="main-container d-flex">
     <div class="actu-container">
-      <div class="widget-1 mobile-screen">
-        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
-        <h2>Je suis solidaire contre la COVID</h2>
-        <i class="fa fa-arrow-right"></i>
-      </div>
+      <a href="{{ path('solidaire') }}">
+        <div class="widget-1 mobile-screen">
+          <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+          <h2>Je suis solidaire contre la COVID</h2>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
       {% for post in posts %}
         <div class="card-actu">
           <div class="card-actu-img" style="background-image: url({{ asset(post.imgPath) }});"></div>
@@ -30,12 +32,14 @@
         </div>
       {% endfor %}
     </div>
-    <div class="widget-container">
-      <div class="widget-1">
-        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
-        <h2>Je suis solidaire contre la COVID</h2>
-        <i class="fa fa-arrow-right"></i>
-      </div>
+    <div class="widget-container">  
+      <a href="{{ path('solidaire') }}">
+        <div class="widget-1">
+          <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+          <h2>Je suis solidaire contre la COVID</h2>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
       <a href="{{ path('campagne') }}">
         <div class="widget-2">
           <i class="fa fa-medkit"></i>
@@ -52,11 +56,13 @@
           <i class="fa fa-arrow-right"></i>
         </div>
       </a>
-      <div class="widget-1">
-        <i class="fa fa-map-marker"></i>
-        <h2>Je trouve un centre de vaccination</h2>
-        <i class="fa fa-arrow-right"></i>
-      </div>
+      <a href="{{ path('centre') }}">
+        <div class="widget-1">
+          <i class="fa fa-map-marker"></i>
+          <h2>Je trouve un centre de vaccination</h2>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
     </div>
   </div>
 {% endblock %}

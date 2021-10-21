@@ -1,5 +1,5 @@
 <header>
-  <div class="main-container">
+  <div class="main-container-header">
     <div class="logo-gouv">
       <img src="{{ asset('assets/images/logo_gouv.png') }}" alt="">
     </div>
@@ -25,8 +25,8 @@
           <li class="navigation-link-item"><a class="{{ active == 'l\' actualité' ? 'active' : '' }}" href="{{ path('home') }}">L'actualité</a></li>
           <li class="navigation-link-item"><a class="{{ active == 'la campagne de vaccination' ? 'active' : '' }}" href="{{ path('campagne') }}">La campagne de vaccination</a></li>
           <li class="navigation-link-item"><a class="{{ active == 'la stratégie vaccinale' ? 'active' : '' }}" href="{{ path('strategy') }}">La stratégie vaccinale</a></li>
-          <li class="navigation-link-item"><i class="fa fa-map-marker"></i><a href="">&nbsp;Trouver un centre de vaccination</a></li>
-          <li class="navigation-link-item"><a href="">Je suis solidaire contre la COVID</a></li>
+          <li class="navigation-link-item"><i class="fa fa-map-marker"></i><a href="{{ path('centre') }}">&nbsp;Trouver un centre de vaccination</a></li>
+          <li class="navigation-link-item"><a class="{{ active == 'Je suis solidaire contre la COVID' ? 'active' : '' }}" href="{{ path('solidaire') }}">Je suis solidaire contre la COVID</a></li>
         </ul>
       </nav>
     </div>

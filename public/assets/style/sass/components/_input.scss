@@ -3,25 +3,34 @@
 }
 .input-text-group {
   position: relative;
-  .input-control {
-    width: 500px;
+  margin-bottom: 20px;
+  .input-control, textarea {
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(#7a7a7a, .5);
     border-radius: 5px;
     outline: none;
-    margin: 5px;
+    display: block;
     font-size: 1em;
     padding: 10px 20px;
     box-sizing: border-box;
+    color: $grey-7;
+  }
+  textarea {
+    height: 250px;
+    resize: none;
+    font-family: $roboto;
   }
   label {
     position: absolute;
     left: 20px;
-    top: -7px;
+    top: -9px;
     background-color: white;
-    color: $primary;
+    color: $blue;
     padding: 0 5px; 
     opacity: 0;
+    font-weight: 600;
+    font-size: .9em;
     transition: all .2s;
   }
   i.fa.fa-eye {
@@ -31,12 +40,53 @@
     right: 20px;
     color: rgba(#7a7a7a, .5);
   }
-  .input-control:focus {
-    border: 2px solid $primary;
+  .input-control:focus, textarea:focus {
+    border: 2px solid $blue;
     + label {
       opacity: 1;
       + i.fa.fa-eye {
-        color: $primary;
+        color: $blue;
+      }
+    }
+  }
+}
+
+.checkbox-group {
+  color: $grey-5;
+  margin-bottom: 20px;
+  input {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  label {
+    position: relative;
+    padding-left: 10px;
+    cursor: pointer;
+    i {
+      position: absolute;
+      font-size: .9rem;
+      left: -12px;
+      top: 1px;
+      color: white;
+      height: 15px;
+      width: 15px;
+      padding: 0;
+      border: 1px solid rgba($grey-7, .5);
+      border-radius: 3px;
+      box-sizing: border-box;
+      box-shadow: inset 0 2px 4px rgba(black, .1);
+      &::before {
+        display: none;
+      }
+    }
+  }
+  input:checked + label {
+    i {
+      background-color: $blue;
+      border: none;
+      &::before {
+        display: block;
       }
     }
   }

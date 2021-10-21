@@ -5,11 +5,13 @@
   <div class="bg-container">
     <div class="logo-widget-group">
       <img src="{{ asset('assets/images/OMS-logo.png') }}" alt="logo OMS">
-      <div class="widget-1 mobile-screen">
-        <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
-        <h2>Je suis solidaire contre la COVID</h2>
-        <i class="fa fa-arrow-right"></i>
-      </div>
+      <a href="{{ path('solidaire') }}">
+        <div class="widget-1 mobile-screen">
+          <img src="{{ asset('assets/images/mask.png') }}" alt="masque covid">
+          <h2>Je suis solidaire contre la COVID</h2>
+          <i class="fa fa-arrow-right"></i>
+        </div>
+      </a>
     </div>
     <h3>Vaccins et vaccination : qu’est-ce que la vaccination ?</h3>
     <div class="question-container">
